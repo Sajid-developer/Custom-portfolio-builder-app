@@ -1,0 +1,101 @@
+:root {
+  --bg: #1c1c1c;
+  --text: #fff;
+  --accent: #ffa500;
+}
+
+body.light {
+  --bg: #f0f0f0;
+  --text: #111;
+  --accent: #0055ff;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.form-section,
+.preview-section {
+  flex: 1 1 400px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background: rgba(255,255,255,0.05);
+  border: none;
+  border-radius: 8px;
+  color: var(--text);
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 10px 20px;
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+h2, h3, h4 {
+  color: var(--accent);
+}
+
+ul {
+  list-style: none;
+  padding-left: 15px;
+}
+
+ul li::before {
+  content: "✅ ";
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+#themeToggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
