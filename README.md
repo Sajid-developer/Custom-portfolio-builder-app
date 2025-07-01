@@ -5,4 +5,4 @@ Create your personal portfolio in minutes with our Custom Portfolio Builder App.
 
 ## 📷 Screenshot
 
-![Portfolio](https://www.figma.com/community/resource/1ac978cd-ec44-4c9b-8d40-2fd61468e968/thumbnail)
+![Portfolio](images/screenshot.png)
