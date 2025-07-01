@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Custom Portfolio Builder</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <button id="themeToggle">🌙 Toggle Theme</button>
+
+  <div class="container">
+    <div class="form-section">
+      <h2>Portfolio Builder</h2>
+      <input type="text" id="name" placeholder="Your Name" />
+      <input type="text" id="title" placeholder="Your Title" />
+      <textarea id="bio" placeholder="Short Bio"></textarea>
+      <input type="file" id="profilePic" accept="image/*" />
+
+      <input type="text" id="skills" placeholder="Skills (comma separated)" />
+      <textarea id="projects" placeholder="Projects (Title - Link, one per line)"></textarea>
+
+      <input type="text" id="github" placeholder="GitHub URL" />
+      <input type="text" id="linkedin" placeholder="LinkedIn URL" />
+      <input type="text" id="twitter" placeholder="Twitter URL" />
+
+      <button id="downloadZip">📦 Export Portfolio as ZIP</button>
+    </div>
+
+    <div class="preview-section">
+      <img id="preview-image" src="" alt="Profile" class="profile-img" />
+      <h1 id="preview-name">Your Name</h1>
+      <h3 id="preview-title">Your Title</h3>
+      <p id="preview-bio">Your bio goes here.</p>
+
+      <h4>Skills:</h4>
+      <ul id="preview-skills"></ul>
+
+      <h4>Projects:</h4>
+      <ul id="preview-projects"></ul>
+
+      <div class="social-icons" id="socialLinks"></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.0/jszip.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
