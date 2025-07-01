@@ -104,6 +104,7 @@ document.getElementById('downloadZip').addEventListener('click', () => {
 <head>
   <meta charset="UTF-8">
   <title>${elements.name.value}'s Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -149,13 +150,22 @@ body.light {
   --accent: #0055ff;
 }
 
+*{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
 body {
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
   background: var(--bg);
   color: var(--text);
+  letter-spacing: 0.5px;
   margin: 0;
-  padding: 20px;
+  padding: 10px;
   transition: background 0.3s, color 0.3s;
+}
+p{
+    font-size: 14px;
 }
   button {
   padding: 10px 20px;
@@ -164,11 +174,12 @@ body {
   border-radius: 8px;
   color: white;
   cursor: pointer;
-  margin-top: 15px;
+  margin-top: 10px;
 }
-
 h2, h3, h4 {
   color: var(--accent);
+  font-weight: 500;
+  letter-spacing: 0.7px;
 }
 
 ul {
@@ -197,7 +208,7 @@ ul li::before {
 
 #themeToggle {
   position: fixed;
-  top: 15px;
+  top: 10px;
   right: 15px;
   padding: 8px 15px;
   border-radius: 8px;
@@ -208,7 +219,7 @@ ul li::before {
 }`;
 
     const js = `document.getElementById('themeToggle').addEventListener('click', () => {
-  document.body.classList.toggle('light');
+     document.body.classList.toggle('light');
 });`;
 
     folder.file("index.html", html);

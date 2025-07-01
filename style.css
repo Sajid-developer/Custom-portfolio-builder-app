@@ -9,14 +9,22 @@ body.light {
   --text: #111;
   --accent: #0055ff;
 }
-
+*{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
 body {
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
   background: var(--bg);
   color: var(--text);
+  letter-spacing: 0.5px;
   margin: 0;
   padding: 10px;
   transition: background 0.3s, color 0.3s;
+}
+p{
+    font-size: 14px;
 }
 
 .container {
@@ -63,6 +71,8 @@ button {
 
 h2, h3, h4 {
   color: var(--accent);
+  font-weight: 500;
+  letter-spacing: 0.7px;
 }
 
 ul {
