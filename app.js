@@ -114,12 +114,13 @@ document.getElementById('downloadZip').addEventListener('click', () => {
       <h3>${elements.title.value}</h3>
       <p>${elements.bio.value}</p>
       <h4>Skills</h4>
-      <ul>${skillsInput.value.split(',').map(skill => `<li>${skill.trim()}</li>`).join('')}</ul>
+      <ul>${skills.value.split(',').map(skill => `<li>${skill.trim()}</li>`).join('')}</ul>
       <h4>Projects</h4>
-      <ul>${projectsInput.value.split('\n').map(p => {
+      <ul>${projects.value.split('\n').map(p => {
         const [t, l] = p.split('-').map(x => x.trim());
         return `<li><a href="${l}" target="_blank">${t}</a></li>`;
       }).join('')}</ul>
+      <h4>Follow Me</h4>
       <div class="social-icons">
         ${elements.github.value ? `<a href="${elements.github.value}"><i class="fab fa-github"></i></a>` : ''}
         ${elements.linkedin.value ? `<a href="${elements.linkedin.value}"><i class="fab fa-linkedin"></i></a>` : ''}
@@ -132,8 +133,13 @@ document.getElementById('downloadZip').addEventListener('click', () => {
 
   const css = document.querySelector('style') ? document.querySelector('style').textContent : '';
 
+  const js = `document.getElementById('themeToggle').addEventListener('click', () => {
+  document.body.classList.toggle('light');
+});`;
+
   zip.file("index.html", html);
   zip.file("style.css", css || document.querySelector('link[rel=stylesheet]').href);
+  zip.file("app.js", js);
 
   zip.generateAsync({ type: "blob" }).then(content => {
     const a = document.createElement('a');
