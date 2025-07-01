@@ -95,8 +95,8 @@ updatePreview(); // Initial call
 // Export ZIP
 document.getElementById('downloadZip').addEventListener('click', () => {
     const zip = new JSZip();
-
-    const profileImg = elements.previewImage.src;
+    const folder = zip.folder("portfolio"); // Main project folder
+    const assetsFolder = folder.folder("assets");
 
     const html = `
 <!DOCTYPE html>
@@ -211,15 +211,15 @@ ul li::before {
   document.body.classList.toggle('light');
 });`;
 
-    zip.file("index.html", html);
-    zip.file("style.css", css);
-    zip.file("app.js", js);
+    folder.file("index.html", html);
+    folder.file("style.css", css);
+    folder.file("app.js", js);
 
     const imageFile = elements.profilePic.files[0];
     if (imageFile) {
         const reader = new FileReader();
         reader.onload = e => {
-            zip.folder("assets").file("profile.jpg", e.target.result.split(',')[1], { base64: true });
+            assetsFolder.file("profile.jpg", e.target.result.split(',')[1], { base64: true });
 
             zip.generateAsync({ type: "blob" }).then(content => {
                 const a = document.createElement('a');
