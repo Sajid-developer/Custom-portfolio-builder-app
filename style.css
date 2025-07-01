@@ -15,7 +15,7 @@ body {
   background: var(--bg);
   color: var(--text);
   margin: 0;
-  padding: 20px;
+  padding: 10px;
   transition: background 0.3s, color 0.3s;
 }
 
@@ -23,7 +23,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(54, 54, 54, 0.1);
   border-radius: 15px;
   padding: 30px;
   max-width: 1200px;
@@ -41,7 +41,7 @@ input, textarea {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
-  background: rgba(255,255,255,0.05);
+  background: var(--bg);
   border: none;
   border-radius: 8px;
   color: var(--text);
@@ -58,7 +58,7 @@ button {
   border-radius: 8px;
   color: white;
   cursor: pointer;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 h2, h3, h4 {
@@ -91,7 +91,7 @@ ul li::before {
 
 #themeToggle {
   position: fixed;
-  top: 15px;
+  top: 10px;
   right: 15px;
   padding: 8px 15px;
   border-radius: 8px;
