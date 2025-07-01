@@ -34,6 +34,7 @@ body {
 .form-section,
 .preview-section {
   flex: 1 1 400px;
+  padding: 10px 40px;
 }
 
 input, textarea {
