@@ -235,7 +235,7 @@ ul li::before {
             zip.generateAsync({ type: "blob" }).then(content => {
                 const a = document.createElement('a');
                 a.href = URL.createObjectURL(content);
-                a.download = `${elements.name.value}'s portfolio.zip`;
+                a.download = `${elements.name.value.split(' ')[0]}'s portfolio.zip`;
                 a.click();
             });
         };
@@ -245,7 +245,7 @@ ul li::before {
         zip.generateAsync({ type: "blob" }).then(content => {
             const a = document.createElement('a');
             a.href = URL.createObjectURL(content);
-            a.download = `${elements.name.value}'s portfolio.zip`;
+            a.download = `${elements.name.value.split(' ')[0]}'s portfolio.zip`;
             a.click();
         });
     }
