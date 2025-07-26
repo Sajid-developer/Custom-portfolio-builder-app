@@ -1,4 +1,4 @@
-# Custom Portfolio Builder App
+# Custom Portfolio Builder Application 
 
 Create your personal portfolio in minutes with our Custom Portfolio Builder Application.
 
